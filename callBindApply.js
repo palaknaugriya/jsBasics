@@ -23,8 +23,9 @@ concatinate.apply(name1, ['Jhansi', 'Up'])
 concatinate.apply(name2, ['Delhi', 'Delhi'])
 
 // BIND -> Creates a new function and binds its 'this' to it 
-let bindFunction = concatinate.bind(name1)
-console.log(bindFunction) // returns a function
+let bindFunction1 = concatinate.bind(name1, 'Jhansi', 'Up')
+let bindFunction2 = concatinate.bind(name1, 'Delhi', 'Delhi')
+console.log(bindFunction1) // returns a function
 console.log('BIND')
-bindFunction.apply(name1, ['Jhansi', 'Up'])
-bindFunction.apply(name2, ['Delhi', 'Delhi'])
+bindFunction1()
+bindFunction2()
