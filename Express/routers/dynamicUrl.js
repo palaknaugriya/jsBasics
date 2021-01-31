@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/getUser', (req, res) => {
+router.get('/getUser/:id', (req, res) => {
     res.send({
-        'name': 'Palak',
+        'id': req.params.id,
         'age': 24
     })
 })
